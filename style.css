@@ -1,0 +1,167 @@
+:root {
+  --clr-primary: #7d2ae8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  /* display: grid;
+  place-content: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #fcfcf7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+.container{
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* .gameDisplay {
+  display: flex;
+  height: 7rem;
+}
+
+.gameDisplay > img {
+  min-width: 0;
+} */
+
+.gameDisplay {
+  display: flex;
+  justify-content: space-around;
+  height: 7rem;
+}
+
+.gameDisplay div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.gameDisplay div p {
+  color: var(--clr-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.gameDisplay div p span {
+  margin-left: 5px;
+}
+
+.gameDisplay div img {
+  min-width: 0;
+  max-height: 100%;
+}
+
+
+.gameDisplay .userChoice {
+  transform: rotate(90deg);
+
+}
+
+.gameDisplay .computerChoice {
+  transform: scaleX(-1) rotate(90deg);
+
+}
+
+.animateLeft {
+  animation: pumpLeft 0.7s 5 ease-in-out;
+}
+
+.animateRight {
+  animation: pumpRight 0.7s 5 ease-in-out;
+}
+
+
+
+@keyframes pumpLeft {
+  0% {
+    transform: rotate(90deg) translateX(0);
+  }
+
+  50% {
+    transform: rotate(100deg) translateX(10px);
+  }
+
+  100% {
+    transform: rotate(90deg) translateX(0);
+  }
+}
+
+@keyframes pumpRight {
+  0% {
+    transform: scaleX(-1) rotate(90deg) translateX(0);
+  }
+  50% {
+    transform: scaleX(-1) rotate(100deg) translateX(10px);
+  } 
+  100% {
+    transform: scaleX(-1) rotate(90deg) translateX(0);
+  }
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+
+}
+
+.choice > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.choice div{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.choice div:hover,
+.choice div:focus {
+  opacity: 1;
+}
+
+.choice div img {
+  height: 3.5rem;
+}
+
+.choice div p {
+  align-self: center;
+  color: var(--clr-primary);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.winnerDisplay {
+  align-self: center;
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+}
+

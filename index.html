@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <!-- <div id="gameDisplay" class="gameDisplay">
+      <img src="images/rock.png" alt="user choice" class="userChoice" id="userImg">
+      <img src="images/rock.png" alt="computer choice" class="computerChoice" id="cpuImg">
+    </div> -->
+      <div id="gameDisplay" class="gameDisplay">
+        <div>
+          <img
+            src="images/rock.png"
+            alt="user choice"
+            class="userChoice"
+            id="userImg"
+          />
+          <p>Player <span id="playerScore">0</span></p>
+        </div>
+        <div>
+          <img
+            src="images/rock.png"
+            alt="computer choice"
+            class="computerChoice"
+            id="cpuImg"
+          />
+          <p>Computer <span id="computerScore">0</span></p>
+        </div>
+      </div>
+      <div class="winnerDisplay">
+        <p id="winnerMsg">Let's Play!!</p>
+      </div>
+      <div class="choice">
+        <div onclick="playGame('rock')" id="rock">
+          <img src="images/rock.png" alt="select rock" />
+          <p>Rock</p>
+        </div>
+        <div onclick="playGame('paper')" id="paper">
+          <img src="images/paper.png" alt="select paper" />
+          <p>paper</p>
+        </div>
+        <div onclick="playGame('scissors')" id="scissors">
+          <img src="images/scissors.png" alt="select scissors" />
+          <p>scissors</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
