@@ -54,6 +54,8 @@ img {
   height: 7rem;
 }
 
+
+
 .gameDisplay div {
   display: flex;
   flex-direction: column;
@@ -165,3 +167,28 @@ img {
   color: var(--clr-primary);
 }
 
+@media screen and (max-width: 430px) {
+  .gameDisplay {
+    height: 4rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .gameDisplay div p {
+    font-size: 1rem;
+  }
+
+  .winnerDisplay {
+    font-size: 1.25rem;
+  }
+
+  .choice div img {
+    height: 2.5rem;
+  }
+
+  .choice div p{
+    font-size: 0.875rem;
+  }
+}
